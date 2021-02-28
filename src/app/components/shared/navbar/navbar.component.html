@@ -1,27 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+<nav class="navbar navbar-expand-lg " style="background: #262626;" >
+    <a class="navbar-brand" style=" color: #80d8ff; font-family: 'Syne Mono', monospace;" href="#">
+      <!--<img src="assets/img/IoT.ico" width="80" alt="" loading="lazy">-->
+      <img src="assets/img/startup.svg" width="45" alt="" loading="lazy">IoT:UCO
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['home']">Home </a>
+    
+    
+    
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="class-name">
+          <a class="nav-link" [routerLink]="['home'] " style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;" > </a>
+        </li>
+        <li class="nav-item" routerLink="/heroes" routerLinkActive="class-name" routerLinkActiveOptions="{exact:true}">
+          <a class="nav-link" [routerLink]="['heroes']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;">Ingresar </a>
         </li>
         <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['heroes']">Heroes </a>
-        </li>
-        <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['about']">About </a>
+          <a class="nav-link pull-right" [routerLink]="['about']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;">Registrar </a>
         </li>
         
+        
       </ul>
-      <form class="form-inline my-2 ">
-        <input class="form-control mr-sm-1" style="background-color: lightgrey;" type="search" placeholder="Buscar Heroe" aria-label="Search" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto >
-        <button (click)="buscarHeroe(buscarTexto.value)"   [routerLink]="['heroes/search']" class="btn btn-outline-secondary btn-sm my-2 my-sm-0" type="button">Buscar</button>
-      </form>
+      
     </div>
   </nav>
+
+  
