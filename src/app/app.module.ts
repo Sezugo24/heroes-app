@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 //servicios
@@ -22,6 +23,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
+import { CrudUserComponent } from './components/crud-user/crud-user.component';
 
 
 
@@ -34,10 +36,12 @@ import { SearchComponent } from './components/search/search.component';
     HeroesComponent,
     HeroeComponent,
     SearchComponent,
+    CrudUserComponent,
   
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     APP_ROUTING
   ],
   providers: [

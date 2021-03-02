@@ -1,6 +1,6 @@
 <form class="box" action="index.html" method="post">
     <h1 style=" font-family: 'Syne Mono', monospace;">Ingresar</h1>
-    <input type="text" name="" placeholder="Email">
-    <input type="password" name="" placeholder="Password">
-    <input type="submit" name="" value="Ok">
+    <input [(ngModel)] ="email" type="text" name="" placeholder="Email">
+    <input [(ngModel)] ="password" type="password" name="" placeholder="Password">
+    <input (click)="verCrudUser()" type="submit" name="" value="Ok">
   </form>

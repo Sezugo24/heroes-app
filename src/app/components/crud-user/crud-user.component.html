@@ -1,0 +1,32 @@
+<form class="box" action="index.html" method="post" style="">
+    <input (click)="verRegistrar()" type="submit" name="" value="Nuevo usuario">
+
+    <!-- ver esta tabla https://codepen.io/ajlohman/full/tLvdF 
+                        https://colorlib.com/wp/bootstrap-tables/ -->
+        <table class="table-dark">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>UserName</th>
+            <th>Age</th>
+          </tr>
+          </thead>
+          <tbody> 
+          <tr *ngFor="let user of heroes">
+            <td class="hidden"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
+              <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+          </tr>
+          </tbody>
+        </table>
+
+</form>
+
+
