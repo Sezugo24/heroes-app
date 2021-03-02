@@ -17,7 +17,7 @@ export class HeroesComponent implements OnInit {
   password: string;
 
   constructor( private _heroesService: HeroesService,
-              // private _usuariosService: SuperUsuariosService,
+               private _usuariosService: SuperUsuariosService,
                private _router: Router ) { 
       
   }
@@ -25,7 +25,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
 
     this.heroes = this._heroesService.getHeroes();
-    //this.usuarios = this._usuariosService.getUsusarios();
+    this.users = this._usuariosService.getUsusarios();
     
     //console.log(this.heroes);
 
@@ -37,14 +37,15 @@ export class HeroesComponent implements OnInit {
   }
   verCrudUser(){
     //traer usuarios de la bbase de datos
-    /*
-    if(this._usuariosService.searchUsuario(this.email) && this._usuariosService.searchContraseña(this.password)  ){
+    
+    if(this._usuariosService.searchUsuario(this.email) && this._usuariosService.searchContraseña(this.password)){
       this._router.navigate( ['/newUser']);
     }
     else{
       console.log("usuario incorrectos")
-    }*/
-    this._router.navigate( ['/newUser']);
+    }
+    console.log(this.email);
+    console.log(this.password);
     
   }
 
