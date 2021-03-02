@@ -10,14 +10,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" routerLinkActive="class-name">
-          <a class="nav-link" [routerLink]="['home'] " style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;" > </a>
+          <a class="nav-link" [routerLink]="['home'] " style="color: #00e17b; font-family: 'Patrick Hand SC', cursive;" >Manager </a>
         </li>
+        
+
+       
         <li class="nav-item" routerLink="/heroes" routerLinkActive="class-name" routerLinkActiveOptions="{exact:true}">
-          <a class="nav-link" [routerLink]="['heroes']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;">Ingresar </a>
+          <a class="nav-link" [routerLink]="['heroes']" style="color: #00e17b; font-family: 'Patrick Hand SC', cursive; ">User </a>
         </li>
         <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link pull-right" [routerLink]="['about']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;">Registrar </a>
+          <a class="nav-link pull-right" [routerLink]="['about']" style="color: #00e17b; font-family: 'Patrick Hand SC', cursive; ">Power User </a>
         </li>
+       
+             
+          <li class="nav-item" routerLink="/heroes" routerLinkActive="class-name" routerLinkActiveOptions="{exact:true}">
+            <a class="nav-link" [routerLink]="['heroes']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive; "> <strong>Ingresar</strong></a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="nav-link pull-right" [routerLink]="['about']" style="color: #80d8ff; font-family: 'Patrick Hand SC', cursive;"> <strong>Registrar</strong></a>
+          </li>
+
+        
+        
         
         
       </ul>
