@@ -17,7 +17,7 @@ export class SuperUsuariosService {
         },
         {
             nombre: "sebastian",
-            password: "1234" 
+            password: "abc" 
         }
     ];
     
@@ -32,30 +32,16 @@ export class SuperUsuariosService {
 
         let usuariosArr:superUsuario[] = [];
         termino = termino.toLowerCase(); //Recibimos nuestro termino y mediente de la funcion toLowerCase todo nyestro texto será en minuscula
-        let isEncontrado : Boolean = false;
+        let index : number = -1;
         for (let usuario of this.superUsuarios){          
           let nombre = usuario.nombre.toLowerCase();
           if (nombre.indexOf(termino) >=0 ){
-            usuariosArr.push( usuario)
-            isEncontrado = true;
+            usuariosArr.push(usuario);
           }    
         }
-        return isEncontrado;
+        return usuariosArr;
       }
 
-      searchContraseña(termino: string){
-
-        let usuariosArr:superUsuario[] = [];
-        termino = termino.toLowerCase(); //Recibimos nuestro termino y mediente de la funcion toLowerCase todo nyestro texto será en minuscula
-        let isEncontrado : Boolean = false;
-        for (let usuario of this.superUsuarios){          
-          let password = usuario.password;
-          if (password.indexOf(termino) >=0 ){
-            usuariosArr.push( usuario)
-            isEncontrado = true;
-          }    
-        }
-        return isEncontrado;
-      }
+      
 
 }

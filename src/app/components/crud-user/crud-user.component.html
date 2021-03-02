@@ -7,10 +7,7 @@
           <thead>
           <tr>
             <th class="hidden">Id</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>UserName</th>
-            <th>Age</th>
+            <th>Nombre</th>
           </tr>
           </thead>
           <tbody> 
@@ -18,9 +15,6 @@
             <td class="hidden"></td>
             <td></td>
             <td>{{user.nombre}}</td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
               <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
           </tr>

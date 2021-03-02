@@ -37,16 +37,21 @@ export class HeroesComponent implements OnInit {
   }
   verCrudUser(){
     //traer usuarios de la bbase de datos
-    
-    if(this._usuariosService.searchUsuario(this.email) && this._usuariosService.searchContraseña(this.password)){
-      this._router.navigate( ['/newUser']);
+    let userInfo: any = this._usuariosService.searchUsuario(this.email);
+    let passwordUser = userInfo[0].password;
+    console.log("contraseña ingresada, pass db: ");
+    console.log(this.password);
+    console.log(passwordUser);
+
+    if(passwordUser == this.password ){
+      this._router.navigate( ['/newUser'] );
     }
     else{
-      console.log("usuario incorrectos")
+      console.log("usuario o contraseña incorrectos")
     }
     console.log(this.email);
     console.log(this.password);
-    
+    console.log(this._usuariosService.searchUsuario(this.email));    
   }
 
 }
