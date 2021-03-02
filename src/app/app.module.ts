@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 //servicios
 
 import { HeroesService } from './service/heroes.service';
+import {SuperUsuariosService} from './service/usuarios.service'
 
 
 
@@ -45,7 +46,8 @@ import { CrudUserComponent } from './components/crud-user/crud-user.component';
     APP_ROUTING
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    SuperUsuariosService
   ],
   bootstrap: [AppComponent]
 })
